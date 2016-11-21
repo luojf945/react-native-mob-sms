@@ -1,0 +1,19 @@
+{
+  "name": "react-native-mob-sms",
+  "version": "1.0.0",
+  "description": "封装mob的短信验证功能",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luojf945/react-native-mob-sms.git"
+  },
+  "author": "luojf945",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luojf945/react-native-mob-sms/issues"
+  },
+  "homepage": "https://github.com/luojf945/react-native-mob-sms#readme"
+}

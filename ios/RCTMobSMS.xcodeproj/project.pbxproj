@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8489C7DE1DE2D12000E1650B /* RCTMobSMS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8489C7DD1DE2D12000E1650B /* RCTMobSMS.m */; };
+		8489C7E81DE2D1F800E1650B /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8489C7E51DE2D1F800E1650B /* MOBFoundation.framework */; };
+		8489C7E91DE2D1F800E1650B /* MOBFoundationEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8489C7E61DE2D1F800E1650B /* MOBFoundationEx.framework */; };
+		8489C7EA1DE2D1F800E1650B /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8489C7E71DE2D1F800E1650B /* SMS_SDK.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E632A2471D757FCD001BCAE0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8489C7DC1DE2D12000E1650B /* RCTMobSMS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTMobSMS.h; path = RCTMobSMS/RCTMobSMS.h; sourceTree = SOURCE_ROOT; };
+		8489C7DD1DE2D12000E1650B /* RCTMobSMS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTMobSMS.m; path = RCTMobSMS/RCTMobSMS.m; sourceTree = SOURCE_ROOT; };
+		8489C7E51DE2D1F800E1650B /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MOBFoundation.framework; path = RCTMobSMS/SMS_SDK/MOBFoundation.framework; sourceTree = SOURCE_ROOT; };
+		8489C7E61DE2D1F800E1650B /* MOBFoundationEx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MOBFoundationEx.framework; path = RCTMobSMS/SMS_SDK/MOBFoundationEx.framework; sourceTree = SOURCE_ROOT; };
+		8489C7E71DE2D1F800E1650B /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMS_SDK.framework; path = RCTMobSMS/SMS_SDK/SMS_SDK.framework; sourceTree = SOURCE_ROOT; };
+		E632A2491D757FCD001BCAE0 /* libRCTMobSMS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTMobSMS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E632A2461D757FCD001BCAE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8489C7EA1DE2D1F800E1650B /* SMS_SDK.framework in Frameworks */,
+				8489C7E81DE2D1F800E1650B /* MOBFoundation.framework in Frameworks */,
+				8489C7E91DE2D1F800E1650B /* MOBFoundationEx.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E632A2401D757FCD001BCAE0 = {
+			isa = PBXGroup;
+			children = (
+				E632A24B1D757FCD001BCAE0 /* RCTMobSMS */,
+				E632A24A1D757FCD001BCAE0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E632A24A1D757FCD001BCAE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E632A2491D757FCD001BCAE0 /* libRCTMobSMS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E632A24B1D757FCD001BCAE0 /* RCTMobSMS */ = {
+			isa = PBXGroup;
+			children = (
+				8489C7E51DE2D1F800E1650B /* MOBFoundation.framework */,
+				8489C7E61DE2D1F800E1650B /* MOBFoundationEx.framework */,
+				8489C7E71DE2D1F800E1650B /* SMS_SDK.framework */,
+				8489C7DC1DE2D12000E1650B /* RCTMobSMS.h */,
+				8489C7DD1DE2D12000E1650B /* RCTMobSMS.m */,
+			);
+			name = RCTMobSMS;
+			path = RCTQiYu;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E632A2481D757FCD001BCAE0 /* RCTMobSMS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E632A2521D757FCD001BCAE0 /* Build configuration list for PBXNativeTarget "RCTMobSMS" */;
+			buildPhases = (
+				E632A2451D757FCD001BCAE0 /* Sources */,
+				E632A2461D757FCD001BCAE0 /* Frameworks */,
+				E632A2471D757FCD001BCAE0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RCTMobSMS;
+			productName = RCTQiYu;
+			productReference = E632A2491D757FCD001BCAE0 /* libRCTMobSMS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E632A2411D757FCD001BCAE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Netease;
+				TargetAttributes = {
+					E632A2481D757FCD001BCAE0 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = E632A2441D757FCD001BCAE0 /* Build configuration list for PBXProject "RCTMobSMS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E632A2401D757FCD001BCAE0;
+			productRefGroup = E632A24A1D757FCD001BCAE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E632A2481D757FCD001BCAE0 /* RCTMobSMS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E632A2451D757FCD001BCAE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8489C7DE1DE2D12000E1650B /* RCTMobSMS.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E632A2501D757FCD001BCAE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E632A2511D757FCD001BCAE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E632A2531D757FCD001BCAE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RCTMobSMS/SMS_SDK",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E632A2541D757FCD001BCAE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RCTMobSMS/SMS_SDK",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E632A2441D757FCD001BCAE0 /* Build configuration list for PBXProject "RCTMobSMS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E632A2501D757FCD001BCAE0 /* Debug */,
+				E632A2511D757FCD001BCAE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E632A2521D757FCD001BCAE0 /* Build configuration list for PBXNativeTarget "RCTMobSMS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E632A2531D757FCD001BCAE0 /* Debug */,
+				E632A2541D757FCD001BCAE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E632A2411D757FCD001BCAE0 /* Project object */;
+}
