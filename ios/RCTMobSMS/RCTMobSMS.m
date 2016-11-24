@@ -33,13 +33,20 @@ RCT_EXPORT_METHOD(registerApp:(NSString*)appKey withSecret:(NSString*)appSecret)
 }
 
 
-RCT_EXPORT_METHOD(getVerificationCodeByMethod:(SMSGetCodeMethod)method
+RCT_EXPORT_METHOD(getVerificationCodeByMethod:(NSInteger)method
                   phoneNumber:(NSString *)phoneNumber
                   zone:(NSString *)zone
                   customIdentifier:(NSString *)customIdentifier
-//                  result:(RCTResponseErrorBlock)result) {
+                  //                  result:(RCTResponseErrorBlock)result) {
                   callback:(RCTResponseErrorBlock)callback) {
-    [SMSSDK getVerificationCodeByMethod:method phoneNumber:phoneNumber zone:zone customIdentifier:customIdentifier result:callback];
+    
+    [SMSSDK getVerificationCodeByMethod:(SMSGetCodeMethod)method
+                            phoneNumber:phoneNumber
+                                   zone:zone
+                       customIdentifier:customIdentifier
+                                 result:^(NSError *error) {
+                                     callback(error);
+                                 }];
 }
 
 
@@ -47,14 +54,15 @@ RCT_EXPORT_METHOD(getVerificationCodeByMethod:(SMSGetCodeMethod)method
 RCT_EXPORT_METHOD(commitVerificationCode:(NSString *)code
                   phoneNumber:(NSString *)phoneNumber
                   zone:(NSString *)zone
-//                  result:(SMSCommitCodeResultHandler)result) {
+                  //                  result:(SMSCommitCodeResultHandler)result) {
                   callback:(RCTResponseErrorBlock)callback) {
-
-    SMSCommitCodeResultHandler result = ^(SMSSDKUserInfo *userInfo, NSError *error) {
-        callback(error);
-    };
     
-    [SMSSDK commitVerificationCode:code phoneNumber:phoneNumber zone:zone result:result];
+    [SMSSDK commitVerificationCode:code
+                       phoneNumber:phoneNumber
+                              zone:zone
+                            result:^(SMSSDKUserInfo *userInfo, NSError *error) {
+                                callback(error);
+                            }];
 }
 
 

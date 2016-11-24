@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		848459AA1DE3489E00625C57 /* RCTMobSMS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8489C7DC1DE2D12000E1650B /* RCTMobSMS.h */; };
 		8489C7DE1DE2D12000E1650B /* RCTMobSMS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8489C7DD1DE2D12000E1650B /* RCTMobSMS.m */; };
 		8489C7E81DE2D1F800E1650B /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8489C7E51DE2D1F800E1650B /* MOBFoundation.framework */; };
 		8489C7E91DE2D1F800E1650B /* MOBFoundationEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8489C7E61DE2D1F800E1650B /* MOBFoundationEx.framework */; };
@@ -16,16 +17,21 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		E632A2471D757FCD001BCAE0 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				848459AA1DE3489E00625C57 /* RCTMobSMS.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		848459861DE3462600625C57 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		848459881DE3463E00625C57 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		8484598A1DE3465800625C57 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		8484598C1DE3466300625C57 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		8489C7DC1DE2D12000E1650B /* RCTMobSMS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTMobSMS.h; path = RCTMobSMS/RCTMobSMS.h; sourceTree = SOURCE_ROOT; };
 		8489C7DD1DE2D12000E1650B /* RCTMobSMS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTMobSMS.m; path = RCTMobSMS/RCTMobSMS.m; sourceTree = SOURCE_ROOT; };
 		8489C7E51DE2D1F800E1650B /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MOBFoundation.framework; path = RCTMobSMS/SMS_SDK/MOBFoundation.framework; sourceTree = SOURCE_ROOT; };
@@ -48,11 +54,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		848459851DE3462600625C57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8484598C1DE3466300625C57 /* libicucore.tbd */,
+				8484598A1DE3465800625C57 /* libz.tbd */,
+				848459881DE3463E00625C57 /* libstdc++.tbd */,
+				848459861DE3462600625C57 /* JavaScriptCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E632A2401D757FCD001BCAE0 = {
 			isa = PBXGroup;
 			children = (
 				E632A24B1D757FCD001BCAE0 /* RCTMobSMS */,
 				E632A24A1D757FCD001BCAE0 /* Products */,
+				848459851DE3462600625C57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,7 +195,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -215,8 +233,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -225,13 +244,17 @@
 		E632A2531D757FCD001BCAE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RCTMobSMS/SMS_SDK",
 				);
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -240,13 +263,17 @@
 		E632A2541D757FCD001BCAE0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RCTMobSMS/SMS_SDK",
 				);
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
