@@ -1,6 +1,6 @@
 {
   "name": "react-native-mob-sms",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "封装mob的短信验证功能",
   "main": "index.js",
   "scripts": {

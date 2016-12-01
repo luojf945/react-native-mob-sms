@@ -23,7 +23,10 @@
 
 @implementation RCTMobSMS
 
-@synthesize bridge=_bridge;
+- (NSArray<NSString *> *)supportedEvents
+{
+    return @[@"mobSMSEvent"];//有几个就写几个
+}
 
 RCT_EXPORT_MODULE();
 
@@ -45,7 +48,18 @@ RCT_EXPORT_METHOD(getVerificationCodeByMethod:(NSInteger)method
                                    zone:zone
                        customIdentifier:customIdentifier
                                  result:^(NSError *error) {
-                                     callback(error);
+                                     NSMutableDictionary *body = [[NSMutableDictionary alloc] init];
+                                     if (error == NULL) {
+                                         body[@"code"] = @"0";
+                                     } else {
+                                         body[@"code"] = [NSString stringWithFormat: @"%ld", error.code];
+                                         NSDictionary *userInfo = [error userInfo];
+                                         body[@"message"] = [userInfo objectForKey:@"getVerificationCode"];
+                                     }
+                                     body[@"type"] = @"getVerificationCode.Resp";
+                                     
+                                     [self sendEventWithName:@"mobSMSEvent" body:body];
+                                     
                                  }];
 }
 
@@ -61,7 +75,17 @@ RCT_EXPORT_METHOD(commitVerificationCode:(NSString *)code
                        phoneNumber:phoneNumber
                               zone:zone
                             result:^(SMSSDKUserInfo *userInfo, NSError *error) {
-                                callback(error);
+                                NSMutableDictionary *body = [[NSMutableDictionary alloc] init];
+                                if (error == NULL) {
+                                    body[@"code"] = @"0";
+                                } else {
+                                    body[@"code"] = [NSString stringWithFormat: @"%ld", error.code];
+                                    NSDictionary *userInfo = [error userInfo];
+                                    body[@"message"] = [userInfo objectForKey:@"commitVerificationCode"];
+                                }
+                                body[@"type"] = @"commitVerificationCode.Resp";
+                                
+                                [self sendEventWithName:@"mobSMSEvent" body:body];
                             }];
 }
 
