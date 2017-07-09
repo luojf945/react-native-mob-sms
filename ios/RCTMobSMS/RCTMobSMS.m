@@ -8,9 +8,9 @@
 
 #import "RCTMobSMS.h"
 #import "SMS_SDK/SMSSDK.h"
-#import "RCTConvert.h"
-#import "RCTBridge.h"
-#import "RCTEventDispatcher.h"
+#import "React/RCTConvert.h"
+#import "React/RCTBridge.h"
+#import "React/RCTEventDispatcher.h"
 
 
 @interface RCTMobSMS ()

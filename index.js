@@ -4,7 +4,6 @@ import React, {
   NativeEventEmitter,
   NativeModules
 } from 'react-native';
-import promisify from 'es6-promisify';
 import { EventEmitter } from 'events';
 
 const {MobSMS} = NativeModules;
