@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RCTBridgeModule.h"
 #import "RCTEventEmitter.h"
 
-@interface RCTMobSMS : RCTEventEmitter<RCTBridgeModule>
+@interface RCTMobSMS : RCTEventEmitter
 
 
 @end
